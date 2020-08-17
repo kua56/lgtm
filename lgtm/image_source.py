@@ -1,7 +1,7 @@
 import requests
 from io import BytesIO
 
-class LocalImage
+class LocalImage:
     """ファイルから画像を取得する"""
 
     def __init__(self, path):
@@ -11,7 +11,7 @@ class LocalImage
         return open(self._path, 'rb')
 
 class RemoteImage:
-    ""URLから画像を取得する"""
+    """URLから画像を取得する"""
 
     def __init__(self, path):
         self._path = path
@@ -35,7 +35,7 @@ class _LoremFlickr(RemoteImage):
 
 keywordImage = _LoremFlickr
 
-from pathlib import path
+from pathlib import Path
 
 def ImageSource(keyword):
     """最適なイメージソースクラスを返す"""
